@@ -12,6 +12,10 @@
   font-family: Arial, sans-serif;
 }
 
+.card:last-child {
+  margin-right: 0; /* Remove margin from the last card to avoid extra spacing */
+}
+
 .name {
   font-size: 18px;
   font-weight: bold;

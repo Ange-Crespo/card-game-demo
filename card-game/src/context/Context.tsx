@@ -1,5 +1,6 @@
 import React, { ReactNode, createContext, useReducer } from "react";
 import { IAction, ICard, IDeck, IPlayer } from "../interface/interface";
+import Card from "../component/Card";
 
 const initialState: IPlayer[] = [
 	{
