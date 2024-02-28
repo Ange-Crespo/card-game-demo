@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const DeckBuilder = () => {
+const DeckBuilder = () => {
   return (
-    <div>Game</div>
+    <div>DeckBuilder</div>
   )
 }
+
+export default DeckBuilder

@@ -1,4 +1,4 @@
-export interface Card {
+export interface ICard {
     id: number;
     name: string;
     force: number;
@@ -8,5 +8,5 @@ export interface Card {
 }
 
 export interface Deck {
-    deck : Card[];
+    deck : ICard[];
 }

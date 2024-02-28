@@ -1,0 +1,47 @@
+.card {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.force {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 14px;
+}
+
+.hp {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 14px;
+}
+
+.cost {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 14px;
+}
+
+.point {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 14px;
+}
