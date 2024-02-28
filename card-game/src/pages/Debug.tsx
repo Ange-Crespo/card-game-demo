@@ -39,7 +39,6 @@ export const Debug = () => {
     };
   return (
     <>  
-        {cardID}
         <button onClick={()=>getCardPrevious(cardID)}>Previous</button>
         <button onClick={()=>getCardRandomly()}>Click to Update Card</button>
         <button onClick={()=>getCardNext(cardID)}>Next</button>
