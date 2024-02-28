@@ -10,3 +10,18 @@ export interface Card {
 export interface Deck {
     deck : Card[];
 }
+
+export interface Main {
+    main : Card[]
+}
+
+export interface Player {
+    playerDeck : Deck;
+    playerMain : Main;
+}
+
+export type Action = {
+	type: string;
+	card: Card;
+    player: string;
+};
