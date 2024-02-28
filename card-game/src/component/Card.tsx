@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { ICard } from "../interface/interface";
 import "../card.css"
 

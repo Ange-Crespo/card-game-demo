@@ -1,4 +1,4 @@
-[
+export var cards = [
     {
         "id": 1,
         "name": "Flame Phoenix",
