@@ -1,7 +1,7 @@
 import React, { ReactNode, createContext, useReducer } from "react";
-import { Action, Card, Deck, Player } from "../interface/interface";
+import { IAction, ICard, IDeck, IPlayer } from "../interface/interface";
 
-const initialState: Player[] = [
+const initialState: IPlayer[] = [
 	{
 		playerDeck: { deck: [] },
 		playerMain: { main: [] },
@@ -12,7 +12,7 @@ const initialState: Player[] = [
 	},
 ];
 
-const userHasCardInDeck = (state: Player[], card: Card, player: string) => {
+const userHasCardInDeck = (state: IPlayer[], card: ICard, player: string) => {
 	if (player === "p1") {
 		if (state[0].playerDeck.deck.includes(card)) {
 			return removeCard("p1", state, card);
@@ -28,16 +28,16 @@ const userHasCardInDeck = (state: Player[], card: Card, player: string) => {
 	}
 };
 
-const addCard = (player: string, state: Player[], card: Card) => {
+const addCard = (player: string, state: IPlayer[], card: ICard) => {
 	let a;
 	if (player === "p1") {
-		a = state[0].playerDeck.deck.filter((c: Card) => c !== card);
+		a = state[0].playerDeck.deck.filter((c: ICard) => c !== card);
 		return {
 			...state,
 			deck: a,
 		};
 	} else {
-		a = state[1].playerDeck.deck.filter((c: Card) => c !== card);
+		a = state[1].playerDeck.deck.filter((c: ICard) => c !== card);
 	}
 	return {
 		...state,
@@ -45,18 +45,18 @@ const addCard = (player: string, state: Player[], card: Card) => {
 	};
 };
 
-const removeCard = (player: string, state: Player[], card: Card) => {
+const removeCard = (player: string, state: IPlayer[], card: ICard) => {
 	let a;
 	if (player === "p1") {
-		a = state[0].playerDeck.deck.filter((c: Card) => c !== card);
+		a = state[0].playerDeck.deck.filter((c: ICard) => c !== card);
 		return [{ ...state[0], playerDeck: { deck: a } }, state[1]];
 	} else {
-		a = state[1].playerDeck.deck.filter((c: Card) => c !== card);
+		a = state[1].playerDeck.deck.filter((c: ICard) => c !== card);
 		return [state[0], { ...state[1], playerDeck: { deck: a } }];
 	}
 };
 
-const reducer = (state: Player[], action: Action) => {
+const reducer = (state: IPlayer[], action: IAction) => {
 	switch (action.type) {
 		case "ADD_REMOVE_CARD_DECK":
 			return userHasCardInDeck(state, action.card, action.player);

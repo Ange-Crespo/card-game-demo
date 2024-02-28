@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li a {
+  color:white;
+  
+}
+
+nav ul li a{
+  margin: auto;
+  color : white;
+  text-decoration: none;
+  text-align: center;
+  padding:10px 7px;
+}
+
+nav ul li:hover a{
+  color : white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  overflow: hidden;
+  height: 40px;
+}
+
+nav ul li:hover{
+  background-color:rgb(130, 130, 130);
+}
+nav ul li {
+  display: inline;
+  padding: 20px 16px;
+  text-align: center;
+  vertical-align:sub;
+}
+.active {
+  background-color: #04AA6D;
+  color: white;
+}

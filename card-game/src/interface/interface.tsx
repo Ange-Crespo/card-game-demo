@@ -7,21 +7,21 @@ export interface ICard {
     point: number;
 }
 
-export interface Deck {
+export interface IDeck {
     deck : ICard[];
 }
 
-export interface Main {
-    main : Card[]
+export interface IMain {
+    main : ICard[]
 }
 
-export interface Player {
-    playerDeck : Deck;
-    playerMain : Main;
+export interface IPlayer {
+    playerDeck : IDeck;
+    playerMain : IMain;
 }
 
-export type Action = {
+export type IAction = {
 	type: string;
-	card: Card;
+	card: ICard;
     player: string;
 };

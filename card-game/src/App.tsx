@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { HeaderComponent } from './component'
-import { DeckBuilder, Game, Home } from './pages';
+import { DeckBuilder, Game, Home, Debug } from './pages';
 
 const App = () => {
   return (
@@ -12,6 +12,7 @@ const App = () => {
           <Route path='' element={<Home/>}/>
           <Route path='/deckbuilder' element={<DeckBuilder/>}/>
           <Route path='/play' element={<Game/>}/>
+          <Route path='/debug' element={<Debug/>}/>
         </Routes>
       </Router>
     </div>
