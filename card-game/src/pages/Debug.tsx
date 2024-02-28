@@ -13,10 +13,37 @@ const newCard : ICard = {
   }
 
 export const Debug = () => {
-    const updateNewCard = ()=>{
-        return cards[Math.random()*200];
+
+    function mod(n:number, m:number) {
+        return ((n % m) + m) % m;
+      }
+    const [card, setCard] = React.useState(newCard);
+    const [cardID, setCardId] = React.useState(0);
+    
+    const getCardPrevious = (cardID:number)=>{
+        let id = mod(cardID-1,200);
+        setCardId(id);
+        setCard(cards[cardID]);
+    };
+
+    const getCardNext = (cardID:number)=>{
+        let id = mod(cardID+1,201);
+        setCardId(id);
+        setCard(cards[cardID]);
+    };
+
+    const getCardRandomly = ()=>{
+        let cardID = Math.floor((Math.random()*201));
+        setCardId(cardID);
+        setCard(cards[cardID]);
     };
   return (
-    <><button onClick={()=>updateNewCard()}>Click to Update Card</button><div>DeBuG o_O'</div><Card card={newCard} /></>
+    <>  
+        {cardID}
+        <button onClick={()=>getCardPrevious(cardID)}>Previous</button>
+        <button onClick={()=>getCardRandomly()}>Click to Update Card</button>
+        <button onClick={()=>getCardNext(cardID)}>Next</button>
+        <div>DeBuG o_O'</div><Card card={card}/>
+    </>
   );
 }
