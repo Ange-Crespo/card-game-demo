@@ -1,9 +1,7 @@
 import React from 'react'
 
-const Game = () => {
+export const Game = () => {
   return (
     <div>Game</div>
   )
 }
-
-export default Game
